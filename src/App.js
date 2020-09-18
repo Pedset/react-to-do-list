@@ -6,6 +6,7 @@ import Header from "./Header";
 import AddTodo from "./AddTodo";
 import About from "./pages/About";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 class App extends Component {
   state = {
     todos: [],
@@ -26,11 +27,11 @@ class App extends Component {
         })
       );
   };
-
   addTodo = (title) => {
     axios
       .post("https://jsonplaceholder.typicode.com/todos", {
         title,
+        id: uuidv4(),
         completed: false,
       })
       .then((res) => {
