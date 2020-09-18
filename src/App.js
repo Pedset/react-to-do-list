@@ -38,7 +38,6 @@ class App extends Component {
         this.setState({
           todos: [...this.state.todos, { ...res.data, id: uuidv4() }],
         });
-        console.log(res.data);
       })
       .catch((e) => {});
   };
