@@ -13,8 +13,7 @@ class Todos extends Component {
               key={todoItem.id}
               todo={todoItem}
               markCompleteProp2={this.props.markCompleteProp}
-              deleteTodoProp2={this.props.deleteTodoProp
-              }
+              deleteTodoProp2={this.props.deleteTodoProp}
             />
           );
         })}
